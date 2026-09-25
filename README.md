@@ -2,9 +2,15 @@
 
 An AI-powered travel planning application that creates personalized, budget-aware itineraries from your origin, destination, travel dates, traveler count, total budget, transportation reserve, and interests. Built with Python and Streamlit, it combines local city search and deterministic budget calculations with OpenAI-generated travel guidance in a focused, responsive interface.
 
-## Preview
+## Project Preview
 
-*Screenshot coming soon: trip preferences and the generated itinerary view.*
+![Personalized trip summary and budget breakdown](assests/trip-overview.png)
+
+*Personalized trip summary with travel details and a clear budget breakdown.*
+
+![Transportation guidance and AI-generated day-by-day itinerary](assests/trip-itinerary.png)
+
+*Transportation guidance and an AI-generated day-by-day itinerary tailored to the trip.*
 
 ## Features
 
