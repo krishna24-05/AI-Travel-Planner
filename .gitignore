@@ -1,0 +1,15 @@
+# Python cache files and virtual environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local secrets
+.env
+.env.*
+.streamlit/secrets.toml
+
+# Reproducible city-index inputs and temporary build output
+data/locations/source/
+data/locations/*.build.sqlite3
+.artifacts/

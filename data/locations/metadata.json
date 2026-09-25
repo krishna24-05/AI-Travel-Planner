@@ -1,0 +1,18 @@
+{
+  "source": "https://download.geonames.org/export/dump/",
+  "license": "CC BY 4.0",
+  "built_at": "2026-09-21T23:22:09.247493+00:00",
+  "cities": 160943,
+  "sha256": {
+    "cities1000.zip": "988995af1dc06c3a6e87887411b6cd5e88987de59c04738b6e039e22a1bf7965",
+    "admin1CodesASCII.txt": "1da92a6323a5fec3176f3f743bf4cf4040fd56a876da55e46fbca23c863aa60a",
+    "countryInfo.txt": "93bafc525813f22e4711ff9ed6d626343094ce48c26388dc7c49189b3d7d5512",
+    "airports.csv": "12a2bcceaa11c4ac9b7e2fa5dac8f91e4750bdf997d9036fd05ebe5ee8faa870"
+  },
+  "schema_version": 4,
+  "airports": {
+    "source": "https://davidmegginson.github.io/ourairports-data/airports.csv",
+    "license": "Public domain",
+    "associations": 2730
+  }
+}

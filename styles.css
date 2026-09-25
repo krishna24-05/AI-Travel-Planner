@@ -1,0 +1,61 @@
+﻿/* Design tokens */
+:root { --travel-bg: #FFFAF8; --travel-ink: #2B1717; --travel-muted: #6B5A5A; --travel-red: #B91C1C; --travel-border: #F1DADA; }
+/* Page and typography */
+.stApp { background: var(--travel-bg); color: var(--travel-ink); color-scheme: light; font-family: 'Segoe UI', Arial, sans-serif; }
+.block-container { max-width: 1060px; padding: 2.5rem 2rem 4rem; }
+/* Keep header status controls available; neutralize only its decorative chrome. */
+[data-testid="stHeader"] { background: var(--travel-bg); }
+[data-testid="stDecoration"] { background: var(--travel-bg); }
+h1, h2, h3, h4 { color: var(--travel-ink) !important; }
+h1 { font-size: clamp(2.1rem, 4.2vw, 3.3rem) !important; letter-spacing: -.045em; line-height: 1.12; max-width: 780px; padding-bottom: 1rem; }
+h2, h3 { font-weight: 600; letter-spacing: -.025em; }
+[data-testid="stCaptionContainer"], [data-testid="stCaptionContainer"] p { color: var(--travel-muted) !important; }
+[data-testid="stCaptionContainer"] { opacity: 1 !important; }
+[data-testid="stText"], [data-testid="stWidgetLabel"] { color: var(--travel-ink) !important; }
+p, li { line-height: 1.65; overflow-wrap: anywhere; }
+/* Product identity and hero */
+.product-identity { font-size: 1.02rem; font-weight: 650; margin-bottom: .6rem; color: var(--travel-red); }
+.st-key-attribution p { font-size: .72rem; line-height: 1.5; }
+.st-key-attribution a { color: var(--travel-muted); text-decoration: underline; }
+.travel-eyebrow { color: var(--travel-red); font-size: .72rem; font-weight: 700; letter-spacing: .17em; margin-bottom: .35rem; }
+/* Cards: native bordered containers, never widget internals */
+.st-key-result_overview, .st-key-result_transportation, .st-key-result_days,
+.st-key-result_notes, .st-key-result_fallback, .st-key-budget_breakdown { border: 1px solid var(--travel-border) !important; border-radius: 14px; background: white; padding: 1.1rem; box-shadow: 0 3px 16px #2B171704; }
+.st-key-trip_inputs { background: white; padding: 1.4rem; border-radius: 14px; border: 1px solid var(--travel-border); }
+/* Form controls and autocomplete host; iframe colors live in location_widgets.py */
+[data-baseweb="input"], [data-baseweb="input"] input, [data-baseweb="select"] > div { background: #FFFDFC !important; color: var(--travel-ink) !important; border-color: var(--travel-border) !important; }
+[data-baseweb="popover"], [role="listbox"], [role="option"] { background-color: white !important; color: var(--travel-ink) !important; }
+[role="option"]:hover, [role="option"][aria-selected="true"] { background-color: #FEF2F2 !important; }
+/* Stable native multiselect tags serve as removable interest chips */
+[data-baseweb="tag"] { background: var(--travel-red) !important; color: white !important; border-radius: 7px; }
+button { border-radius: 8px !important; }
+button:focus-visible, input:focus-visible, [role="tab"]:focus-visible { outline: 2px solid var(--travel-red) !important; outline-offset: 3px; }
+/* Primary action */
+button[kind="primary"] { background: var(--travel-red); border-color: var(--travel-red); color: white; min-height: 3.2rem; font-weight: 650; box-shadow: 0 3px 8px #B91C1C12; }
+button[kind="primary"]:hover { background: #991B1B; border-color: #991B1B; color: white; }
+/* Results */
+.summary-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .8rem; margin: 1rem 0 .6rem; }
+.summary-card { background: white; border: 1px solid var(--travel-border); border-radius: 12px; padding: 1.15rem; }
+.summary-card strong { display: block; font-size: 1.2rem; font-weight: 650; line-height: 1.4; overflow-wrap: anywhere; }
+.summary-card span { display: block; color: var(--travel-muted); font-size: .8rem; margin-top: .35rem; }
+[data-testid="stExpander"] { background: white; border-color: var(--travel-border) !important; border-radius: 10px; }
+[data-testid="stExpander"] summary { color: var(--travel-ink); }
+.st-key-result_days [role="tab"] { background: #FFFDFC; border: 1px solid var(--travel-border); padding: .35rem .75rem; min-height: 2rem; height: auto; }
+.st-key-result_days [role="tab"]:hover { background: #FFF7F5; }
+.st-key-result_days [role="tab"][aria-selected="true"] { background: #FEF2F2; border-color: #FCA5A5; color: var(--travel-red) !important; font-weight: 650; }
+.allocation-bars { display: grid; gap: .7rem; }
+.allocation-row > div:first-child { display: flex; justify-content: space-between; gap: .8rem; font-size: .85rem; }
+.allocation-row strong { white-space: nowrap; font-weight: 600; }
+.allocation-track { height: 5px; background: #FFF7F5; border-radius: 3px; margin-top: .3rem; overflow: hidden; }
+.allocation-track > div { height: 100%; background: var(--travel-red); border-radius: 3px; }
+[data-testid="stMarkdownContainer"] table { width: 100%; font-size: .9rem; }
+/* Responsive */
+@media (max-width: 700px) {
+    .block-container { padding: 1.5rem 1rem 2.5rem; }
+    .product-identity { margin-bottom: .6rem; }
+    .st-key-trip_inputs { padding: .8rem; }
+    .summary-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    [data-testid="stHorizontalBlock"] { flex-wrap: wrap; }
+    [data-testid="stColumn"] { width: 100% !important; flex: 1 1 100% !important; min-width: 0 !important; }
+}
+@media (max-width: 380px) { .summary-grid { grid-template-columns: 1fr; } }
