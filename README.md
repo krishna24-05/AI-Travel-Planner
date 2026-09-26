@@ -4,11 +4,11 @@ An AI-powered travel planning application that creates personalized, budget-awar
 
 ## Project Preview
 
-![Personalized trip summary and budget breakdown](assests/trip-overview.png)
+![Personalized trip summary and budget breakdown](assets/trip-overview.png)
 
 *Personalized trip summary with travel details and a clear budget breakdown.*
 
-![Transportation guidance and AI-generated day-by-day itinerary](assests/trip-itinerary.png)
+![Transportation guidance and AI-generated day-by-day itinerary](assets/trip-itinerary.png)
 
 *Transportation guidance and an AI-generated day-by-day itinerary tailored to the trip.*
 
